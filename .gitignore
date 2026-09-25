@@ -5,10 +5,9 @@
 *.zip
 *.tar.gz
 *.parquet
-data/
-**/data/
-dataset/
-**/dataset/
+
+# Allow directory structure tracking
+!.gitkeep
 
 # Mac / OS files
 .DS_Store
