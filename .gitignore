@@ -2,6 +2,8 @@
 *.tsv
 *.csv
 !experiments/*.csv
+!artifacts/diagnostics/*.csv
+!artifacts/diagnostics/*.tsv
 *.zip
 *.tar.gz
 *.parquet

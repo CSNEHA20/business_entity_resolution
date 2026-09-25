@@ -1,0 +1,325 @@
+{
+  "timestamp": "2026-09-25 22:46:27",
+  "sources": {
+    "train_source1": {
+      "dataset_name": "train_source1",
+      "row_count": 2206821,
+      "unique_ids": 2206821,
+      "missing_name_count": 0,
+      "missing_name_pct": 0.0,
+      "missing_address_count": 0,
+      "missing_address_pct": 0.0,
+      "missing_country_count": 0,
+      "missing_country_pct": 0.0,
+      "unique_raw_names": 1539229,
+      "unique_raw_addresses": 2130606,
+      "name_length_stats": {
+        "min": 3,
+        "mean": 24.03,
+        "median": 24,
+        "p95": 37,
+        "max": 105
+      },
+      "address_length_stats": {
+        "min": 11,
+        "mean": 52.07,
+        "median": 41,
+        "p95": 103,
+        "max": 256
+      },
+      "country_distribution": {
+        "US": 1323633,
+        "India": 883188
+      }
+    },
+    "train_source2": {
+      "dataset_name": "train_source2",
+      "row_count": 5034616,
+      "unique_ids": 5034616,
+      "missing_name_count": 0,
+      "missing_name_pct": 0.0,
+      "missing_address_count": 168967,
+      "missing_address_pct": 3.3561,
+      "missing_country_count": 0,
+      "missing_country_pct": 0.0,
+      "unique_raw_names": 4402009,
+      "unique_raw_addresses": 4337262,
+      "name_length_stats": {
+        "min": 2,
+        "mean": 25.1,
+        "median": 25,
+        "p95": 40,
+        "max": 104
+      },
+      "address_length_stats": {
+        "min": 0,
+        "mean": 46.23,
+        "median": 37,
+        "p95": 96,
+        "max": 249
+      },
+      "country_distribution": {
+        "US": 3016817,
+        "India": 2017799
+      }
+    },
+    "train_source3": {
+      "dataset_name": "train_source3",
+      "row_count": 5285603,
+      "unique_ids": 5285603,
+      "missing_name_count": 0,
+      "missing_name_pct": 0.0,
+      "missing_address_count": 175916,
+      "missing_address_pct": 3.3282,
+      "missing_country_count": 0,
+      "missing_country_pct": 0.0,
+      "unique_raw_names": 4651609,
+      "unique_raw_addresses": 4632765,
+      "name_length_stats": {
+        "min": 2,
+        "mean": 25.2,
+        "median": 25,
+        "p95": 42,
+        "max": 123
+      },
+      "address_length_stats": {
+        "min": 0,
+        "mean": 46.71,
+        "median": 42,
+        "p95": 91,
+        "max": 240
+      },
+      "country_distribution": {
+        "US": 3170056,
+        "India": 2115547
+      }
+    },
+    "test_source1": {
+      "dataset_name": "test_source1",
+      "row_count": 1732544,
+      "unique_ids": 1732544,
+      "missing_name_count": 0,
+      "missing_name_pct": 0.0,
+      "missing_address_count": 0,
+      "missing_address_pct": 0.0,
+      "missing_country_count": 0,
+      "missing_country_pct": 0.0,
+      "unique_raw_names": 1238867,
+      "unique_raw_addresses": 1677483,
+      "name_length_stats": {
+        "min": 3,
+        "mean": 23.84,
+        "median": 24,
+        "p95": 36,
+        "max": 92
+      },
+      "address_length_stats": {
+        "min": 11,
+        "mean": 57.21,
+        "median": 50,
+        "p95": 105,
+        "max": 268
+      },
+      "country_distribution": {
+        "India": 809986,
+        "US": 663106,
+        "France": 259452
+      }
+    },
+    "test_source2": {
+      "dataset_name": "test_source2",
+      "row_count": 4887273,
+      "unique_ids": 4887273,
+      "missing_name_count": 0,
+      "missing_name_pct": 0.0,
+      "missing_address_count": 129408,
+      "missing_address_pct": 2.6479,
+      "missing_country_count": 0,
+      "missing_country_pct": 0.0,
+      "unique_raw_names": 4311041,
+      "unique_raw_addresses": 4224784,
+      "name_length_stats": {
+        "min": 2,
+        "mean": 25.7,
+        "median": 25,
+        "p95": 42,
+        "max": 102
+      },
+      "address_length_stats": {
+        "min": 0,
+        "mean": 50.41,
+        "median": 43,
+        "p95": 99,
+        "max": 269
+      },
+      "country_distribution": {
+        "India": 2312565,
+        "US": 1871330,
+        "France": 703378
+      }
+    },
+    "test_source3": {
+      "dataset_name": "test_source3",
+      "row_count": 5082316,
+      "unique_ids": 5082316,
+      "missing_name_count": 0,
+      "missing_name_pct": 0.0,
+      "missing_address_count": 136098,
+      "missing_address_pct": 2.6779,
+      "missing_country_count": 0,
+      "missing_country_pct": 0.0,
+      "unique_raw_names": 4521929,
+      "unique_raw_addresses": 4456436,
+      "name_length_stats": {
+        "min": 2,
+        "mean": 25.66,
+        "median": 25,
+        "p95": 42,
+        "max": 103
+      },
+      "address_length_stats": {
+        "min": 0,
+        "mean": 48.74,
+        "median": 43,
+        "p95": 94,
+        "max": 267
+      },
+      "country_distribution": {
+        "India": 2405000,
+        "US": 1945701,
+        "France": 731615
+      }
+    }
+  },
+  "ground_truth": {
+    "num_s1_entities": 2206821,
+    "num_singletons": 123247,
+    "singleton_percentage": 5.58,
+    "num_one_match": 119157,
+    "one_match_percentage": 5.4,
+    "num_multi_match": 1964417,
+    "multi_match_percentage": 89.02,
+    "total_positive_pairs": 7638365,
+    "total_s1_s2_positive_pairs": 3693619,
+    "total_s1_s3_positive_pairs": 3944746,
+    "s1_with_both_s2_and_s3_count": 1776047,
+    "s1_with_both_s2_and_s3_pct": 80.48,
+    "max_matches_per_s1": 11,
+    "match_count_distribution": {
+      "0": 123247,
+      "1": 119157,
+      "2": 375212,
+      "3": 530841,
+      "4": 484115,
+      "5": 321957,
+      "6": 164868,
+      "7": 63968,
+      "8": 18680,
+      "9": 4205,
+      "10": 534,
+      "11": 37
+    }
+  },
+  "matching_patterns": {
+    "overall": {
+      "total": 7638365,
+      "counts": {
+        "exact_raw_name": 821025,
+        "exact_norm_name": 2175529,
+        "name_token_sig_match": 2467101,
+        "exact_raw_address": 553282,
+        "exact_norm_address": 887944,
+        "address_token_sig_match": 985105,
+        "exact_country_match": 7638365,
+        "postal_code_match": 366853,
+        "building_number_match": 2637695,
+        "name_or_address_exact_norm": 2853426,
+        "name_and_address_exact_norm": 210047,
+        "name_jaccard_ge_0_5": 6056765,
+        "addr_jaccard_ge_0_5": 5233885
+      },
+      "percentages": {
+        "exact_raw_name_pct": 10.75,
+        "exact_norm_name_pct": 28.48,
+        "name_token_sig_match_pct": 32.3,
+        "exact_raw_address_pct": 7.24,
+        "exact_norm_address_pct": 11.62,
+        "address_token_sig_match_pct": 12.9,
+        "exact_country_match_pct": 100.0,
+        "postal_code_match_pct": 4.8,
+        "building_number_match_pct": 34.53,
+        "name_or_address_exact_norm_pct": 37.36,
+        "name_and_address_exact_norm_pct": 2.75,
+        "name_jaccard_ge_0_5_pct": 79.29,
+        "addr_jaccard_ge_0_5_pct": 68.52
+      }
+    },
+    "S1_S2": {
+      "total": 3693619,
+      "counts": {
+        "exact_raw_name": 407332,
+        "exact_norm_name": 1039440,
+        "name_token_sig_match": 1177555,
+        "exact_raw_address": 382899,
+        "exact_norm_address": 716913,
+        "address_token_sig_match": 715462,
+        "exact_country_match": 3693619,
+        "postal_code_match": 175031,
+        "building_number_match": 1257810,
+        "name_or_address_exact_norm": 1546669,
+        "name_and_address_exact_norm": 209684,
+        "name_jaccard_ge_0_5": 2892215,
+        "addr_jaccard_ge_0_5": 3018581
+      },
+      "percentages": {
+        "exact_raw_name_pct": 11.03,
+        "exact_norm_name_pct": 28.14,
+        "name_token_sig_match_pct": 31.88,
+        "exact_raw_address_pct": 10.37,
+        "exact_norm_address_pct": 19.41,
+        "address_token_sig_match_pct": 19.37,
+        "exact_country_match_pct": 100.0,
+        "postal_code_match_pct": 4.74,
+        "building_number_match_pct": 34.05,
+        "name_or_address_exact_norm_pct": 41.87,
+        "name_and_address_exact_norm_pct": 5.68,
+        "name_jaccard_ge_0_5_pct": 78.3,
+        "addr_jaccard_ge_0_5_pct": 81.72
+      }
+    },
+    "S1_S3": {
+      "total": 3944746,
+      "counts": {
+        "exact_raw_name": 413693,
+        "exact_norm_name": 1136089,
+        "name_token_sig_match": 1289546,
+        "exact_raw_address": 170383,
+        "exact_norm_address": 171031,
+        "address_token_sig_match": 269643,
+        "exact_country_match": 3944746,
+        "postal_code_match": 191822,
+        "building_number_match": 1379885,
+        "name_or_address_exact_norm": 1306757,
+        "name_and_address_exact_norm": 363,
+        "name_jaccard_ge_0_5": 3164550,
+        "addr_jaccard_ge_0_5": 2215304
+      },
+      "percentages": {
+        "exact_raw_name_pct": 10.49,
+        "exact_norm_name_pct": 28.8,
+        "name_token_sig_match_pct": 32.69,
+        "exact_raw_address_pct": 4.32,
+        "exact_norm_address_pct": 4.34,
+        "address_token_sig_match_pct": 6.84,
+        "exact_country_match_pct": 100.0,
+        "postal_code_match_pct": 4.86,
+        "building_number_match_pct": 34.98,
+        "name_or_address_exact_norm_pct": 33.13,
+        "name_and_address_exact_norm_pct": 0.01,
+        "name_jaccard_ge_0_5_pct": 80.22,
+        "addr_jaccard_ge_0_5_pct": 56.16
+      }
+    }
+  },
+  "elapsed_seconds": 1366.88
+}
