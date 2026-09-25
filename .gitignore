@@ -1,9 +1,12 @@
 # Large datasets
 *.tsv
 *.csv
+!experiments/*.csv
 *.zip
 *.tar.gz
 *.parquet
+data/
+**/data/
 dataset/
 **/dataset/
 
