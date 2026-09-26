@@ -1,0 +1,28 @@
+{
+  "training_s1_entities": 30000,
+  "validation_s1_entities": 20000,
+  "training_pairs_total": 230435,
+  "training_positives": 46087,
+  "training_negatives": 184348,
+  "negative_ratio": "1:4.00",
+  "hard_negative_distribution": {
+    "3_high_name_high_address_wrong_entity": 26535,
+    "5_same_building_wrong_entity": 26535,
+    "medium_name_similarity": 26535,
+    "easy_negative": 26535,
+    "1_high_name_wrong_address": 26535,
+    "2_high_address_wrong_name": 26535,
+    "4_same_postal_wrong_entity": 25138
+  },
+  "feature_count": 51,
+  "cpu_training_time_seconds": 1.85,
+  "gpu_training_time_seconds": 0.6,
+  "gpu_speedup": 3.08,
+  "validation_roc_auc": 0.9913,
+  "validation_pr_auc": 0.7461,
+  "validation_macro_f05": 0.4846,
+  "validation_macro_precision": 0.5518,
+  "validation_macro_recall": 0.4395,
+  "singleton_accuracy": 0.507,
+  "total_runtime_seconds": 279.71
+}

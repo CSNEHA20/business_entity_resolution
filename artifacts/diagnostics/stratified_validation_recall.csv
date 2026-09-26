@@ -1,0 +1,12 @@
+stratum,s1_count,true_pairs_in_stratum,true_pairs_recovered,candidate_recall_pct,mean_candidates_per_s1
+1_All_Validation_Sample,20000,68815,30944,44.97,40.89
+2_Singleton_S1_Entities,1150,0,0,100.0,39.31
+3_Single_Match_S1_Entities,1099,1099,495,45.04,40.74
+4_Multi_Match_S1_Entities,17751,67716,30449,44.97,41.0
+5_S1_to_S2_Matched_Entities,17403,65850,29838,45.31,41.0
+6_S1_to_S3_Matched_Entities,17491,66197,29565,44.66,40.93
+7_Country_US,11997,41356,20444,49.43,49.29
+8_Country_India,0,0,0,100.0,0.0
+9_Other_Countries,8003,27459,10500,38.24,28.29
+10_Missing_Address_S1,0,0,0,100.0,0.0
+11_Non_ASCII_MultiScript,4,14,4,28.57,5.0
