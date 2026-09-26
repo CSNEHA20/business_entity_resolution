@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-09-26 14:33:31",
+  "completed_chunks": [
+    1,
+    2
+  ],
+  "total_chunks": 35,
+  "streaming_state": {
+    "total_s1_processed": 100000,
+    "total_candidate_pairs": 14378312,
+    "total_predictions": 211499,
+    "zero_match_s1": 20275,
+    "single_match_s1": 26530,
+    "multi_match_s1": 53195,
+    "s2_predictions": 108038,
+    "s3_predictions": 103461,
+    "zero_candidate_s1": 2731,
+    "chunk_records": [
+      {
+        "chunk_number": 1,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7164884,
+        "predictions_generated": 104064,
+        "elapsed_seconds": 5595.010968923569,
+        "peak_ram_mb": 17690.1875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 2,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7213428,
+        "predictions_generated": 107435,
+        "elapsed_seconds": 1370.3358204364777,
+        "peak_ram_mb": 20356.2421875,
+        "peak_vram_mb": 0.0
+      }
+    ]
+  }
+}

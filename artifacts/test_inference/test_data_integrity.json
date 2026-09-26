@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-09-26 12:24:54",
+  "files": {
+    "TEST S1": {
+      "path": "C:\\Users\\Lenovo\\Downloads\\business-entity-resolution\\data\\test\\test_source1.tsv",
+      "row_count": 1732544,
+      "unique_id_count": 1732544,
+      "duplicate_id_count": 0,
+      "missing_required_fields": {
+        "entity_id": 0,
+        "business_name": 0,
+        "business_address": 0,
+        "country": 0
+      },
+      "missing_address_rate": 0.0,
+      "country_distribution_top10": {
+        "India": 809986,
+        "US": 663106,
+        "France": 259452
+      },
+      "name_length_distribution": {
+        "mean": 23.83642608788002,
+        "median": 24.0,
+        "p95": 36.0,
+        "max": 92,
+        "min": 3
+      },
+      "address_length_distribution": {
+        "mean": 57.213179578700455,
+        "median": 50.0,
+        "p95": 105.0,
+        "max": 268,
+        "min": 11
+      }
+    },
+    "TEST S2": {
+      "path": "C:\\Users\\Lenovo\\Downloads\\business-entity-resolution\\data\\test\\test_source2.tsv",
+      "row_count": 4887273,
+      "unique_id_count": 4887273,
+      "duplicate_id_count": 0,
+      "missing_required_fields": {
+        "entity_id": 0,
+        "business_name": 0,
+        "business_address": 129408,
+        "country": 0
+      },
+      "missing_address_rate": 0.02647856995097266,
+      "country_distribution_top10": {
+        "India": 2312565,
+        "US": 1871330,
+        "France": 703378
+      },
+      "name_length_distribution": {
+        "mean": 25.703646184692364,
+        "median": 25.0,
+        "p95": 42.0,
+        "max": 102,
+        "min": 2
+      },
+      "address_length_distribution": {
+        "mean": 50.413405594490015,
+        "median": 43.0,
+        "p95": 99.0,
+        "max": 269,
+        "min": 0
+      }
+    },
+    "TEST S3": {
+      "path": "C:\\Users\\Lenovo\\Downloads\\business-entity-resolution\\data\\test\\test_source3.tsv",
+      "row_count": 5082316,
+      "unique_id_count": 5082316,
+      "duplicate_id_count": 0,
+      "missing_required_fields": {
+        "entity_id": 0,
+        "business_name": 0,
+        "business_address": 136098,
+        "country": 0
+      },
+      "missing_address_rate": 0.026778736308407425,
+      "country_distribution_top10": {
+        "India": 2405000,
+        "US": 1945701,
+        "France": 731615
+      },
+      "name_length_distribution": {
+        "mean": 25.65519440349636,
+        "median": 25.0,
+        "p95": 42.0,
+        "max": 103,
+        "min": 2
+      },
+      "address_length_distribution": {
+        "mean": 48.74047087981149,
+        "median": 43.0,
+        "p95": 94.0,
+        "max": 267,
+        "min": 0
+      }
+    }
+  }
+}
