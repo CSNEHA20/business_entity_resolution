@@ -92,3 +92,49 @@ def test_candidate_recall():
     assert res["retrieved_true_matches"] == 2
     assert pytest.approx(res["candidate_recall"], 1e-4) == 2 / 3
     assert pytest.approx(res["avg_candidates_per_s1"]) == 4 / 3
+
+
+def test_macro_vs_micro_f05_mathematical_distinction():
+    """
+    Explicitly tests that macro F0.5 per S1 entity is NOT calculated by global micro pooling.
+    Entity 1: Precision = 1.0, Recall = 1.0, F0.5 = 1.0 (1 true, 1 pred)
+    Entity 2: Precision = 0.1, Recall = 1.0 (1 true, 10 pred) -> F0.5 = (1.25 * 0.1 * 1.0)/(0.25*0.1 + 1.0) = 0.125 / 1.025 ≈ 0.12195
+    Macro F0.5 = (1.0 + 0.12195) / 2 = 0.560975
+    Micro Pooling would have: TP=2, FP=9, FN=0 -> Precision=2/11 ≈ 0.1818, Recall=2/2=1.0 -> Micro F0.5 = (1.25 * 0.1818)/(0.25*0.1818+1.0) ≈ 0.21739
+    These MUST NOT match.
+    """
+    gt = {
+        "S1-01": ["S2-01"],
+        "S1-02": ["S2-02"],
+    }
+    preds = {
+        "S1-01": ["S2-01"],
+        "S1-02": ["S2-02"] + [f"S2-dummy-{i}" for i in range(9)],
+    }
+
+    result = compute_macro_f05(gt, preds)
+    expected_f2 = (1.25 * 0.1 * 1.0) / (0.25 * 0.1 + 1.0)
+    expected_macro = (1.0 + expected_f2) / 2.0
+    assert pytest.approx(result["macro_f05"], 1e-4) == expected_macro
+    assert pytest.approx(result["macro_f05"], 1e-4) != 0.21739
+
+
+def test_metrics_handles_duplicate_predictions():
+    """Verify that duplicates in prediction lists are set-deduplicated before metric computation."""
+    gt = {"S1-01": ["S2-01"]}
+    preds = {"S1-01": ["S2-01", "S2-01", "S2-01"]}
+
+    res = compute_macro_f05(gt, preds)
+    assert res["macro_f05"] == 1.0
+    assert res["macro_precision"] == 1.0
+    assert res["macro_recall"] == 1.0
+
+
+def test_missing_prediction_entity_raises_error():
+    """Verify that a missing S1 in predictions raises an explicit ValueError."""
+    gt = {"S1-01": ["S2-01"], "S1-02": []}
+    preds = {"S1-01": ["S2-01"]}  # S1-02 is missing
+
+    with pytest.raises(ValueError, match="Predictions missing 1 Source 1 entities"):
+        compute_macro_f05(gt, preds)
+

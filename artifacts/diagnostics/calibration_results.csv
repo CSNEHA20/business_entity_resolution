@@ -1,0 +1,4 @@
+method,brier_score,macro_f0.5,precision,recall
+Raw XGBoost,0.02246,0.4979,0.5681,0.4417
+Platt Scaling (Sigmoid),0.01546,0.4866,0.5611,0.4171
+Isotonic Regression,0.01302,0.4774,0.5812,0.3441

@@ -1,0 +1,7 @@
+model_id,feature_count,description,macro_f0.5,precision,recall,singleton_f0.5,multi_match_f0.5,train_time_sec
+Model_A_Name_Only,19,Only 13 Name similarity features,0.4002,0.5324,0.237,0.3678,0.4095,0.42
+Model_B_Address_Only,13,Only 14 Address similarity features,0.3345,0.449,0.1973,0.4493,0.3329,0.44
+Model_C_Name_Plus_Address,32,Name + Address features (27 feats),0.4594,0.6057,0.2762,0.5072,0.4642,0.48
+Model_D_Name_Addr_Structural,42,Name + Address + Structural (37 feats),0.4812,0.6309,0.2915,0.5236,0.4863,0.54
+Model_E_All_51_Features,51,Full 51 feature space,0.4784,0.6271,0.2901,0.5217,0.4834,0.58
+Model_F_All_Plus_Provenance,51,Full 51 feature space with Blocking Provenance,0.4784,0.6271,0.2901,0.5217,0.4834,0.53
