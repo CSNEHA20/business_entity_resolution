@@ -4,6 +4,7 @@
 !experiments/*.csv
 !artifacts/diagnostics/*.csv
 !artifacts/diagnostics/*.tsv
+!artifacts/final_audit/*.csv
 *.zip
 *.tar.gz
 *.parquet

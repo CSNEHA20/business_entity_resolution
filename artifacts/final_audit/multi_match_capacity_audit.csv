@@ -1,0 +1,6 @@
+strategy,dev_macro_f05,holdout_macro_f05,holdout_macro_precision,holdout_macro_recall,singleton_f05,single_match_f05,multi_match_f05,s2_f05,s3_f05,avg_predicted_matches_per_s1
+A_No_Capacity_Limit,0.6217,0.6185,0.7472,0.4402,0.9203,0.4552,0.6081,0.6117,0.6008,1.439
+B_Max_1_Per_Source,0.569,0.5674,0.751,0.3426,0.9203,0.4592,0.55,0.5554,0.5457,0.988
+C_Max_2_Per_Source,0.6143,0.6115,0.7486,0.4192,0.9203,0.4552,0.6002,0.604,0.5931,1.32
+D_Adaptive_Score_Distribution,0.6184,0.6156,0.7502,0.429,0.9203,0.4576,0.6046,0.6082,0.5973,1.377
+E_Selected_Decision_Rule,0.569,0.5674,0.751,0.3426,0.9203,0.4592,0.55,0.5554,0.5457,0.988

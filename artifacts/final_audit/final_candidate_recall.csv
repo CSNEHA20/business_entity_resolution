@@ -1,0 +1,3 @@
+pipeline_stage,candidate_recall_overall,candidate_recall_s2,candidate_recall_s3,mean_candidates_per_s1,median_candidates,p95_candidates,p99_candidates,max_candidates,zero_candidate_rate
+BEFORE_PRUNING,0.6932,0.694,0.6924,2474.71,344,13885,24006,39082,0.0322
+AFTER_PRUNING_FINAL_TEST_PIPELINE,0.448,0.5175,0.3825,40.67,31,96,123,177,0.0322
