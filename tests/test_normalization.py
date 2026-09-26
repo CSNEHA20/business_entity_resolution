@@ -4,6 +4,7 @@ Unit tests for deterministic normalization functions and multi-representation re
 
 from src.normalization import (
     build_normalized_record,
+    clean_unicode_ascii,
     extract_building_number,
     extract_numeric_tokens,
     extract_postal_code,
@@ -20,9 +21,11 @@ from src.normalization import (
 
 def test_normalize_basic():
     assert normalize_basic("  Hello,  World! & Friends  ") == "hello world and friends"
-    assert normalize_basic("Cafe\u0301 de Paris") == "cafe de paris"
+    assert normalize_basic("टाटा कंसल्टेंसी") == "टाटा कंसल्टेंसी"
+    assert clean_unicode_ascii("Cafe\u0301 de Paris").lower() == "cafe de paris"
     assert normalize_basic(None) == ""
     assert normalize_basic("") == ""
+
 
 
 def test_normalize_alnum_and_compact():

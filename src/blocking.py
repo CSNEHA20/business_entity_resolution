@@ -27,6 +27,18 @@ class CandidatePairProvenance:
     target_id: str
     target_source: str  # "S2" or "S3"
     routes: Set[str] = field(default_factory=set)
+    route_count: int = 0
+    tier: int = 2
+
+    def __post_init__(self):
+        self.route_count = len(self.routes)
+        if any(r in {"exact_name", "exact_address", "name_token_sig", "address_token_sig"} for r in self.routes):
+            self.tier = 1
+        elif any(r in {"name_tfidf", "address_tfidf", "rare_name_tokens", "token_v2"} for r in self.routes):
+            self.tier = 2
+        else:
+            self.tier = 3
+
 
 
 class MultiPassCandidateGenerator:

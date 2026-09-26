@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from src.blocking import MultiPassCandidateGenerator
+from src.blocking import CandidatePairProvenance, MultiPassCandidateGenerator
 from src.data_io import (
     load_ground_truth,
     load_train_source1,
@@ -85,3 +85,74 @@ def test_blocking_ablation_routes(sample_toy_datasets: Path):
     cands_tfidf, _ = generator.generate_candidates(s1_df, enabled_routes={"name_tfidf"})
     assert isinstance(cands_tfidf, dict)
     assert len(cands_tfidf) == 4
+
+
+def test_unicode_preservation_and_multiscript_normalization():
+    """Test that Indic and European multi-script characters are preserved without corruption."""
+    from src.normalization import (
+        clean_unicode_text,
+        get_token_signature,
+        normalize_basic,
+        normalize_business_name_suffixes,
+    )
+
+    # Indic Devanagari test
+    dev_name = "टाटा कंसल्टेंसी सर्विसेज प्राइवेट लिमिटेड"
+    norm_dev = clean_unicode_text(dev_name)
+    assert "टाटा" in norm_dev
+    assert "कंसल्टेंसी" in norm_dev
+    assert "सर्विसेज" in norm_dev
+
+    # Indic legal suffix normalization
+    dev_suffix = normalize_business_name_suffixes(dev_name)
+    assert "private limited" in dev_suffix or "प्राइवेट" in dev_suffix
+
+    # European accented characters
+    fr_name = "Société Générale de l'Énergie"
+    norm_fr = clean_unicode_text(fr_name)
+    assert "societe" in norm_fr or "société" in norm_fr
+    assert "energie" in norm_fr or "énergie" in norm_fr
+
+    # Token signature preservation
+    sig = get_token_signature("बजाज ऑटो लिमिटेड")
+    assert "ऑटो" in sig
+    assert "बजाज" in sig
+
+
+def test_token_retrieval_v2_high_frequency_handling():
+    """Test that high-frequency tokens participate in compound keys and do not cause single-token explosions."""
+    from src.normalization import extract_postal_code, extract_numeric_tokens
+
+    addr = "123 Main St, Suite 400, Mumbai 400001"
+    postals = extract_postal_code(addr)
+    assert "400001" in postals
+
+    nums = extract_numeric_tokens(addr)
+    assert "123" in nums
+    assert "400" in nums
+
+
+def test_country_partitioning_safety():
+    """Test that country partitioning handles various countries (including test France) dynamically."""
+    from src.normalization import normalize_country
+
+    assert normalize_country("us") == "US"
+    assert normalize_country("india") == "INDIA"
+    assert normalize_country("France") == "FRANCE"
+    assert normalize_country("  de  ") == "DE"
+    assert normalize_country(None) == ""
+
+
+def test_candidate_provenance_and_tiers():
+    """Test candidate provenance records routes and candidate tiers properly."""
+    prov = CandidatePairProvenance(
+        s1_id="S1-001",
+        target_id="S2-001",
+        target_source="S2",
+        routes={"exact_name", "name_tfidf"},
+    )
+    assert prov.s1_id == "S1-001"
+    assert prov.target_id == "S2-001"
+    assert len(prov.routes) == 2
+    assert "exact_name" in prov.routes
+

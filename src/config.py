@@ -61,10 +61,10 @@ class PipelineConfig:
     val_split_seed: int = 42
     stratify_by_match_count: bool = True
     
-    # Blocking / Retrieval Settings
-    top_k_candidates_per_pass: int = 30
-    max_total_candidates_per_s1: int = 60
-    char_ngram_range: Tuple[int, int] = (2, 4)
+    # Blocking / Retrieval Settings (Milestone 3 V2)
+    top_k_candidates_per_pass: int = 50
+    max_total_candidates_per_s1: int = 150
+    char_ngram_range: Tuple[int, int] = (3, 5)
     word_ngram_range: Tuple[int, int] = (1, 2)
     tfidf_max_features: int = 150000
     tfidf_min_df: int = 2

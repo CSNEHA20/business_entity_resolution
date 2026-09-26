@@ -1,7 +1,7 @@
 """
 Comprehensive Multi-Representation Normalization Module for Amazon ML Challenge 2026.
 Preserves original raw text while generating conservative, aggressive, token-sorted,
-and structural representations for robust candidate blocking and feature extraction.
+Unicode-preserving, and structural representations for robust candidate blocking and feature extraction.
 """
 
 from dataclasses import dataclass
@@ -9,7 +9,7 @@ import re
 import unicodedata
 from typing import Any, Dict, List, Optional, Set, Tuple
 
-# Common legal business suffixes and abbreviation mappings
+# Common legal business suffixes and abbreviation mappings (including Indic and European)
 LEGAL_SUFFIX_MAP = {
     r"\bcorp\b": "corporation",
     r"\bcorporation\b": "corporation",
@@ -27,6 +27,15 @@ LEGAL_SUFFIX_MAP = {
     r"\bgmbh\b": "gmbh",
     r"\bsarl\b": "sarl",
     r"\bsa\b": "sa",
+    r"\bsas\b": "sas",
+    r"\bste\b": "societe",
+    r"\bsoc\b": "societe",
+    # Indic suffixes in Devanagari / transliterated
+    r"प्राइवेट\s+लिमिटेड": "private limited",
+    r"प्रा[\.\s]+लि[\.]?": "private limited",
+    r"लिमिटेड": "limited",
+    r"एलएलपी": "llp",
+    r"कंपनी": "company",
 }
 
 # Common address street / unit abbreviation expansions
@@ -45,7 +54,13 @@ ADDRESS_ABBREVIATION_MAP = {
     r"\bno\b": "number",
     r"\bp\s*o\s*box\b": "pobox",
     r"\bpobox\b": "pobox",
+    r"\brue\b": "rue",
+    r"\bav\b": "avenue",
+    r"\bbd\b": "boulevard",
 }
+
+PUNCT_CHARS = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+PUNCT_TABLE = str.maketrans({c: ' ' for c in PUNCT_CHARS})
 
 
 def clean_unicode_ascii(text: Optional[str]) -> str:
@@ -56,43 +71,53 @@ def clean_unicode_ascii(text: Optional[str]) -> str:
     return text.encode("ascii", "ignore").decode("utf-8")
 
 
+def clean_unicode_text(text: Optional[str]) -> str:
+    """
+    Normalizes text while strictly preserving non-Latin scripts (Devanagari, Tamil, Kannada, etc.)
+    and accented European characters (French accents, German umlauts).
+    Uses NFKC normalization and handles combining marks properly.
+    """
+    if text is None or not isinstance(text, str):
+        return ""
+    t = unicodedata.normalize("NFKC", str(text)).casefold()
+    t = t.replace("&", " and ").translate(PUNCT_TABLE)
+    return " ".join(t.split())
+
+
 def normalize_basic(text: Optional[str]) -> str:
     """
     Conservative basic normalization:
-    - Unicode to ASCII
-    - Lowercase
+    - Unicode normalized (NFKC) & casefolded
     - '&' converted to ' and '
-    - Punctuation replaced with space
+    - Punctuation replaced with space (preserving Unicode alphabets, Indic matras, and digits)
     - Multiple whitespace collapsed
     """
     if text is None or not isinstance(text, str):
         return ""
-    text = clean_unicode_ascii(text).lower()
-    text = text.replace("&", " and ")
-    text = re.sub(r"[^\w\s]", " ", text)
-    return re.sub(r"\s+", " ", text).strip()
+    return clean_unicode_text(text)
 
 
 def normalize_alnum(text: Optional[str]) -> str:
-    """Strict alphanumeric representation without spaces or punctuation."""
+    """Strict alphanumeric representation without spaces or punctuation, preserving Unicode letters/digits."""
     if text is None or not isinstance(text, str):
         return ""
-    cleaned = clean_unicode_ascii(text).lower()
-    return re.sub(r"[^a-z0-9]", "", cleaned)
+    cleaned = clean_unicode_text(text)
+    return "".join(c for c in cleaned if c.isalnum())
 
 
 def normalize_compact(text: Optional[str]) -> str:
-    """Alphanumeric words separated by single spaces."""
+    """Alphanumeric words separated by single spaces, preserving Unicode characters."""
     if text is None or not isinstance(text, str):
         return ""
-    basic = normalize_basic(text)
-    return re.sub(r"[^a-z0-9\s]", "", basic).strip()
+    cleaned = clean_unicode_text(text)
+    words = ["".join(c for c in w if c.isalnum()) for w in cleaned.split()]
+    return " ".join(w for w in words if w).strip()
 
 
 def tokenize_text(text: Optional[str]) -> List[str]:
-    """Extracts non-empty token list from basic normalized text."""
-    basic = normalize_basic(text)
-    return [t for t in basic.split(" ") if t]
+    """Extracts non-empty token list from normalized text."""
+    clean = clean_unicode_text(text)
+    return [t for t in clean.split(" ") if t]
 
 
 def get_token_signature(text: Optional[str]) -> str:
@@ -104,20 +129,33 @@ def get_token_signature(text: Optional[str]) -> str:
     return " ".join(sorted(tokens))
 
 
+def get_char_ngrams(text: Optional[str], n_range: Tuple[int, int] = (3, 5)) -> List[str]:
+    """Extracts character n-grams from normalized text."""
+    if text is None:
+        return []
+    clean = clean_unicode_text(text).replace(" ", "")
+    ngrams = []
+    min_n, max_n = n_range
+    for n in range(min_n, max_n + 1):
+        if len(clean) >= n:
+            ngrams.extend([clean[i : i + n] for i in range(len(clean) - n + 1)])
+    return list(set(ngrams))
+
+
 def normalize_business_name_suffixes(name: Optional[str]) -> str:
     """Expands/standardizes legal business suffixes."""
-    basic = normalize_basic(name)
+    clean = clean_unicode_text(name)
     for pattern, replacement in LEGAL_SUFFIX_MAP.items():
-        basic = re.sub(pattern, replacement, basic)
-    return re.sub(r"\s+", " ", basic).strip()
+        clean = re.sub(pattern, replacement, clean)
+    return re.sub(r"\s+", " ", clean).strip()
 
 
 def normalize_address_abbreviations(address: Optional[str]) -> str:
     """Expands standard street and unit abbreviations."""
-    basic = normalize_basic(address)
+    clean = clean_unicode_text(address)
     for pattern, replacement in ADDRESS_ABBREVIATION_MAP.items():
-        basic = re.sub(pattern, replacement, basic)
-    return re.sub(r"\s+", " ", basic).strip()
+        clean = re.sub(pattern, replacement, clean)
+    return re.sub(r"\s+", " ", clean).strip()
 
 
 def normalize_country(country: Optional[str]) -> str:
@@ -171,6 +209,7 @@ class NormalizedEntityRecord:
     # Business Name Representations
     name_raw: str
     name_basic: str
+    name_clean_unicode: str
     name_alnum: str
     name_compact: str
     name_tokens: List[str]
@@ -181,6 +220,7 @@ class NormalizedEntityRecord:
     # Address Representations
     address_raw: str
     address_basic: str
+    address_clean_unicode: str
     address_alnum: str
     address_compact: str
     address_tokens: List[str]
@@ -211,11 +251,13 @@ def build_normalized_record(
     a_raw = str(business_address or "")
     c_raw = str(country or "")
 
+    n_u = clean_unicode_text(n_raw)
     n_basic = normalize_basic(n_raw)
     n_tokens = tokenize_text(n_raw)
     n_sorted = sorted(set(n_tokens))
     n_sig = " ".join(n_sorted)
     
+    a_u = clean_unicode_text(a_raw)
     a_basic = normalize_basic(a_raw)
     a_tokens = tokenize_text(a_raw)
     a_sorted = sorted(set(a_tokens))
@@ -225,6 +267,7 @@ def build_normalized_record(
         entity_id=str(entity_id).strip(),
         name_raw=n_raw,
         name_basic=n_basic,
+        name_clean_unicode=n_u,
         name_alnum=normalize_alnum(n_raw),
         name_compact=normalize_compact(n_raw),
         name_tokens=n_tokens,
@@ -233,6 +276,7 @@ def build_normalized_record(
         name_legal_normalized=normalize_business_name_suffixes(n_raw),
         address_raw=a_raw,
         address_basic=a_basic,
+        address_clean_unicode=a_u,
         address_alnum=normalize_alnum(a_raw),
         address_compact=normalize_compact(a_raw),
         address_tokens=a_tokens,
