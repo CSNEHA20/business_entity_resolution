@@ -1,0 +1,44 @@
+{
+  "candidate_counts": {
+    "train_dev_conservative_mean": 83.86,
+    "test_sample_conservative_mean": 79.1,
+    "test_sample_conservative_p95": 200,
+    "test_sample_conservative_p99": 250,
+    "test_sample_zero_candidate_rate": 0.0549
+  },
+  "name_length_distribution": {
+    "train_name_len_mean": 24.03,
+    "train_name_len_median": 24,
+    "train_name_len_p95": 37,
+    "test_name_len_mean": 23.83,
+    "test_name_len_median": 24,
+    "test_name_len_p95": 36
+  },
+  "address_length_distribution": {
+    "train_addr_len_mean": 52.07,
+    "train_addr_len_median": 41,
+    "train_addr_len_p95": 103,
+    "test_addr_len_mean": 57.01,
+    "test_addr_len_median": 50,
+    "test_addr_len_p95": 105
+  },
+  "missing_address_rate": {
+    "train_missing_addr_rate": 0.0,
+    "test_missing_addr_rate": 0.0
+  },
+  "unicode_non_ascii_rate": {
+    "train_non_ascii_rate": 0.0,
+    "test_non_ascii_rate": 0.0238
+  },
+  "top_country_distribution": {
+    "train_countries": {
+      "US": 1323633,
+      "INDIA": 883188
+    },
+    "test_sample_countries": {
+      "INDIA": 23300,
+      "US": 19215,
+      "FRANCE": 7485
+    }
+  }
+}

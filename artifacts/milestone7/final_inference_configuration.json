@@ -1,0 +1,45 @@
+{
+  "configuration_name": "Milestone7_none_No_Limit",
+  "model_file": "artifacts/models/retrained_hardneg_model.pkl",
+  "model_sha256": "3e8d2d386b2b3cffd47b0c461015011c2190ae70825c0100a7fabadf6e215646",
+  "features_count": 51,
+  "blocking_version": "Two-Stage Multi-Pass Inverted Index (7 Routes)",
+  "pruning_version": "none",
+  "capacity_strategy": "No_Limit",
+  "decision_engine_config": {
+    "strategy": "adaptive_multi",
+    "global_threshold": 0.65,
+    "threshold_s2": 0.4775,
+    "threshold_s3": 0.4975,
+    "min_top_prob": 0.428,
+    "min_margin": 0.0,
+    "multi_match_threshold": 0.458,
+    "max_multi_score_drop": 0.16,
+    "max_matches_per_source": 0,
+    "missing_addr_threshold_boost": 0.05,
+    "enable_multi_match": true,
+    "enable_singleton_abstention": true
+  },
+  "metrics_holdout": {
+    "holdout_macro_f05": 0.6991,
+    "holdout_macro_precision": 0.8037,
+    "holdout_macro_recall": 0.5416,
+    "singleton_f05": 0.873,
+    "single_match_f05": 0.5242,
+    "multi_match_f05": 0.6985,
+    "s2_f05": 0.6984,
+    "s3_f05": 0.6913,
+    "candidate_recall": 0.5742
+  },
+  "candidate_volume": {
+    "mean_candidates_per_s1": 142.33,
+    "p95_candidates": 351,
+    "estimated_total_test_candidate_pairs": 246230900
+  },
+  "resources_and_scalability": {
+    "chunk_size": 50000,
+    "estimated_test_runtime_minutes": 722.2,
+    "expected_peak_ram_mb": 22167.4,
+    "expected_vram_gb": 0.0
+  }
+}

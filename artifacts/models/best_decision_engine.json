@@ -1,14 +1,14 @@
 {
   "strategy": "adaptive_multi",
   "global_threshold": 0.65,
-  "threshold_s2": 0.47750000000000004,
-  "threshold_s3": 0.49750000000000005,
+  "threshold_s2": 0.4775,
+  "threshold_s3": 0.4975,
   "min_top_prob": 0.428,
   "min_margin": 0.0,
   "multi_match_threshold": 0.458,
   "max_multi_score_drop": 0.16,
-  "max_matches_per_source": 1,
-  "missing_addr_threshold_boost": 0.0,
+  "max_matches_per_source": 0,
+  "missing_addr_threshold_boost": 0.05,
   "enable_multi_match": true,
   "enable_singleton_abstention": true
 }
