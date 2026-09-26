@@ -1,0 +1,11 @@
+stage,true_pairs_remaining,true_pairs_lost,recall,S2_recall,S3_recall,loss_reason
+Stage 0: Ground Truth True Pairs,34463,0,1.0,1.0,1.0,none
+Stage 1: Raw Blocking Generation,19787,14676,0.5742,0.6307,0.5212,not retrieved by blocking
+Stage 2: Candidate Deduplication,19787,0,0.5742,0.6307,0.5212,removed during deduplication
+Stage 3: Candidate Pruning,15570,4217,0.4518,0.5261,0.3822,removed by candidate pruning
+Stage 4: Feature Extraction,15570,0,0.4518,0.5261,0.3822,feature-generation failure
+Stage 5: GBDT Score,14942,628,0.4336,0.5034,0.3682,model score too low
+Stage 6a: Decision Singleton Gate,14942,0,0.4336,0.5034,0.3682,singleton gate
+Stage 6b: Decision Secondary Margin Rule,14274,668,0.4142,0.4837,0.349,secondary margin rule
+Stage 6c: Decision Capacity Rule,9826,4448,0.2851,0.3234,0.2493,source-capacity rule
+Stage 6d: Final Predicted Matches,9826,0,0.2851,0.3234,0.2493,other
