@@ -1,1 +1,2 @@
 submission_id,timestamp,matching_file,candidate_file,validator_status,cv_macro_f05,public_lb_score,notes
+SUBMISSION_01_FROZEN_M8,2026-09-27 10:21:22,artifacts/submissions/SUBMISSION_01_FROZEN_M8/matching_results.tsv,artifacts/submissions/SUBMISSION_01_FROZEN_M8/candidate_pairs.tsv,PASSED,0.6991,,"Milestone 8 frozen production inference. 248.97M candidates, 3.63M matches, adaptive multi-match, 100% invariant verified"

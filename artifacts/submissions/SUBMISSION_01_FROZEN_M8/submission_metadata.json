@@ -1,0 +1,22 @@
+{
+  "submission_id": "SUBMISSION_01_FROZEN_M8",
+  "timestamp": "2026-09-27 11:27:13",
+  "model_sha256": "3e8d2d386b2b3cffd47b0c461015011c2190ae70825c0100a7fabadf6e215646",
+  "decision_config_sha256": "c358e8c6c5411dd286c5822a527f61bce158cb64010d0aad0f914f6a6ca66a2e",
+  "pipeline_manifest_sha256": "42bd66199fdbe7b96c58bd244ca69d95bbbcfccbf9911a55f99b8137f2783d49",
+  "matching_results_sha256": "bf7f37f2caabd9fd30136c1f1e56ed945e92b209c49e1c1bfd8b54f37c354c76",
+  "candidate_pairs_sha256": "ea6154d3d9086a690c95b32f6c0aaf0d5d4850b2fb4e34e798bfa24d15d332f6",
+  "candidate_count": 248971025,
+  "prediction_count": 3634786,
+  "s1_query_count": 1732544,
+  "zero_match_count": 352010,
+  "single_match_count": 458249,
+  "multi_match_count": 922285,
+  "s2_prediction_count": 1854809,
+  "s3_prediction_count": 1779977,
+  "holdout_macro_f05": 0.6991,
+  "holdout_precision": 0.8037,
+  "holdout_recall": 0.5416,
+  "validator_status": "PASSED (0 errors, strict invariants verified)",
+  "leaderboard_score": null
+}
