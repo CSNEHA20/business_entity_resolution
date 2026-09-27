@@ -6,6 +6,7 @@
 !artifacts/diagnostics/*.tsv
 !artifacts/final_audit/*.csv
 !artifacts/milestone9/*.csv
+!artifacts/milestone10/*.csv
 *.zip
 *.tar.gz
 *.parquet

@@ -1,0 +1,7 @@
+strategy,dev_macro_f05,dev_precision,dev_recall,parameters
+1_probability_threshold,0.3822899843671734,0.3983477178415991,0.5577742857142858,"{""threshold"": 0.9600000000000004}"
+2_singleton_abstention,0.2387861037278274,0.2422947573651596,0.6159374603174603,"{""min_top"": 0.9, ""threshold"": 0.8}"
+3_threshold_plus_margin,0.36305662176601,0.3771482176902028,0.5724546031746032,"{""threshold"": 0.6, ""margin"": 0.05}"
+4_expected_f05_prefix,0.3183297609775366,0.3092765079365079,0.5662901587301586,"{""min_top"": 0.6}"
+5_candidate_rank_aware,0.5213355939811821,0.62,0.35974595238095236,"{""max_k"": 2, ""threshold"": 0.55}"
+6_adaptive_multi,0.4982478165560229,0.5308,0.4747853174603175,"{""threshold_s2"": 0.65, ""threshold_s3"": 0.65, ""min_top"": 0.65, ""multi_th"": 0.6}"

@@ -50,6 +50,25 @@ class EntityDecisionEngine:
     def __init__(self, config: Optional[DecisionRuleConfig] = None):
         self.config = config or DecisionRuleConfig()
 
+    def decide_matches(
+        self,
+        s1_id: str,
+        candidates: Union[List[Tuple[str, float]], Dict[str, float]],
+        s1_meta: Optional[Dict[str, Any]] = None,
+    ) -> Any:
+        """Convenience method returning an object with matched_entity_ids list."""
+        if isinstance(candidates, list):
+            cand_dict = {tid: float(score) for tid, score in candidates}
+        else:
+            cand_dict = candidates
+        matched_ids = self.predict_entity(cand_dict, s1_meta)
+
+        class MatchResult:
+            def __init__(self, m_ids: List[str]):
+                self.matched_entity_ids = m_ids
+
+        return MatchResult(matched_ids)
+
     def predict_entity(
         self,
         candidate_scores: Dict[str, float],

@@ -1,0 +1,23 @@
+{
+  "train": {
+    "count": 12000,
+    "sha256": "3881f00e8369ba32b914a62f16fce0a933bb347f35c05ee5831c05bb77645e1d",
+    "singletons": 655,
+    "multi_match": 10698,
+    "total_gt_pairs": 41525
+  },
+  "dev": {
+    "count": 5000,
+    "sha256": "ea4db4af53cbf653826408c3101baecd38e728dd15b76f1afe2e3cef9f76020a",
+    "singletons": 296,
+    "multi_match": 4455,
+    "total_gt_pairs": 17292
+  },
+  "holdout": {
+    "count": 5000,
+    "sha256": "1cecb7d028a672b21be4b89d8ed6f008b019fb23cd4e811e391ebd32801e7ef1",
+    "singletons": 245,
+    "multi_match": 4472,
+    "total_gt_pairs": 17379
+  }
+}

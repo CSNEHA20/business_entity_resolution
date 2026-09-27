@@ -1,0 +1,78 @@
+{
+  "milestone": "Milestone 10",
+  "validation_status": "REAL OPEN-CORPUS VERIFIED",
+  "target_corpus_size": 10320219,
+  "dev_macro_f05": 0.4982478165560229,
+  "strategy_evaluation": {
+    "1_probability_threshold": {
+      "threshold": 0.9600000000000004,
+      "macro_f05": 0.3822899843671734,
+      "precision": 0.3983477178415991,
+      "recall": 0.5577742857142858
+    },
+    "2_singleton_abstention": {
+      "min_top": 0.9,
+      "threshold": 0.8,
+      "macro_f05": 0.2387861037278274,
+      "precision": 0.2422947573651596,
+      "recall": 0.6159374603174603
+    },
+    "3_threshold_plus_margin": {
+      "threshold": 0.6,
+      "margin": 0.05,
+      "macro_f05": 0.36305662176601,
+      "precision": 0.3771482176902028,
+      "recall": 0.5724546031746032
+    },
+    "4_expected_f05_prefix": {
+      "min_top": 0.6,
+      "macro_f05": 0.3183297609775366,
+      "precision": 0.3092765079365079,
+      "recall": 0.5662901587301586
+    },
+    "5_candidate_rank_aware": {
+      "max_k": 2,
+      "threshold": 0.55,
+      "macro_f05": 0.5213355939811821,
+      "precision": 0.62,
+      "recall": 0.35974595238095236
+    },
+    "6_adaptive_multi": {
+      "threshold_s2": 0.65,
+      "threshold_s3": 0.65,
+      "min_top": 0.65,
+      "multi_th": 0.6,
+      "macro_f05": 0.4982478165560229,
+      "precision": 0.5308,
+      "recall": 0.4747853174603175
+    }
+  },
+  "holdout_results_m10": {
+    "candidate_recall": 0.7371540364808101,
+    "macro_f05": 0.5044445425689759,
+    "macro_precision": 0.5380666666666666,
+    "macro_recall": 0.47965952380952387,
+    "singleton_f05": 0.11836734693877551,
+    "multi_match_f05": 0.5389964545438716,
+    "s2_f05": 0.463329070929071,
+    "s3_f05": 0.5419578033078033,
+    "mean_candidates_per_query": 111.4196
+  },
+  "m7_control_holdout": {
+    "candidate_recall": 0.3076,
+    "macro_f05": 0.5077,
+    "macro_precision": 0.6503,
+    "macro_recall": 0.3233,
+    "singleton_f05": 0.9551,
+    "multi_match_f05": 0.4959,
+    "s2_f05": 0.5182,
+    "s3_f05": 0.4972
+  },
+  "frozen_decision_config": {
+    "strategy": "adaptive_multi",
+    "threshold_s2": 0.65,
+    "threshold_s3": 0.65,
+    "min_top_prob": 0.65,
+    "multi_match_threshold": 0.6
+  }
+}

@@ -1,0 +1,9 @@
+Metric,M7 Legitimate Control,Milestone 10 Engine,Delta
+Candidate Recall (Open Corpus),30.76%,73.72%,+42.96%
+Holdout Macro F0.5 (Official),0.5077,0.5044,-0.0033
+Holdout Macro Precision,0.6503,0.5381,-0.1122
+Holdout Macro Recall,0.3233,0.4797,+0.1564
+Singleton F0.5,0.9551,0.1184,-0.8367
+Multi-Match F0.5,0.4959,0.5390,+0.0431
+Source 2 F0.5,0.5182,0.4633,-0.0549
+Source 3 F0.5,0.4972,0.5420,+0.0448

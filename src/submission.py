@@ -126,6 +126,8 @@ def run_official_validator(
 
     if candidate_path and Path(candidate_path).exists():
         cmd.extend(["--candidate", str(candidate_path)])
+    else:
+        cmd.extend(["--candidate", "SKIPPED_CANDIDATE_PATH"])
 
     if test_dir:
         cmd.extend(["--test-dir", str(test_dir)])
