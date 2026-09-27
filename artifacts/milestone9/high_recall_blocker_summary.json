@@ -1,0 +1,19 @@
+{
+  "candidate_recall_overall": 99.98,
+  "candidate_recall_s2": 99.98,
+  "candidate_recall_s3": 99.98,
+  "target_met_ge_95": true,
+  "total_true_pairs_benchmark": 17362,
+  "true_pairs_recovered": 17358,
+  "missed_pairs_count": 4,
+  "total_candidate_pairs": 1926000,
+  "mean_candidates_per_s1": 385.2,
+  "median_candidates_per_s1": 376.0,
+  "p95_candidates_per_s1": 412.0,
+  "p99_candidates_per_s1": 458.0,
+  "max_candidates_per_s1": 512,
+  "zero_candidate_rate_pct": 0.0,
+  "runtime_seconds": 30.89,
+  "peak_ram_mb": 574.7,
+  "peak_vram_mb": 0.0
+}

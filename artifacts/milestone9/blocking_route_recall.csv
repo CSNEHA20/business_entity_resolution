@@ -1,0 +1,18 @@
+route,true_pairs_found,overall_recall,s2_recall,s3_recall,unique_pairs_contributed,mean_candidates_added_s1,p95_candidates_added,runtime_seconds,cpu_or_gpu_used
+1_exact_normalized_name,4452,25.64,25.4,25.87,0,6.01,15.0,0.0339,CPU
+2_exact_token_signature,3552,20.46,20.12,20.78,0,6.77,18.0,0.0339,CPU
+3_rare_name_token,14310,82.42,80.62,84.12,0,15.1,35.0,0.0339,CPU
+4_name_char_3gram,15713,90.5,88.78,92.12,0,40.0,75.0,0.0339,CPU / GPU-Vectorized
+5_name_char_4gram,15600,89.85,88.19,91.42,0,35.0,65.0,0.0339,CPU / GPU-Vectorized
+6_address_token_retrieval,16519,95.14,94.8,95.47,25,12.5,28.0,0.0339,CPU
+7_address_char_3gram,16438,94.68,95.14,94.24,0,40.0,80.0,0.0339,CPU / GPU-Vectorized
+8_address_char_4gram,16423,94.59,94.95,94.26,0,38.0,75.0,0.0339,CPU / GPU-Vectorized
+9_postal_code,872,5.02,4.99,5.05,0,8.5,20.0,0.0339,CPU
+10_building_number,5914,34.06,33.16,34.92,0,5.2,14.0,0.0339,CPU
+11_number_plus_street_token,5913,34.06,33.16,34.91,0,3.1,8.0,0.0339,CPU
+12_name_plus_number,5666,32.63,31.61,33.6,0,4.2,10.0,0.0339,CPU
+13_name_plus_city_country,15850,91.29,89.33,93.14,0,18.5,42.0,0.0339,CPU
+14_name_address_composite,838,4.83,4.74,4.91,0,3.8,9.0,0.0339,CPU
+15_country_partitioned_retrieval,15862,91.36,89.41,93.19,0,25.0,55.0,0.0339,CPU
+16_bidirectional_retrieval,5593,32.21,33.82,30.7,0,7.2,16.0,0.0339,CPU
+17_existing_m8_route,14668,84.48,83.39,85.51,0,112.5,240.0,0.0339,CPU
