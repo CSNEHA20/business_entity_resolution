@@ -1,0 +1,36 @@
+{
+  "split_definition": {
+    "train_new_count": 12000,
+    "train_new_hash": "3881f00e8369ba32b914a62f16fce0a933bb347f35c05ee5831c05bb77645e1d",
+    "dev_new_count": 5000,
+    "dev_new_hash": "ea4db4af53cbf653826408c3101baecd38e728dd15b76f1afe2e3cef9f76020a",
+    "holdout_new_count": 5000,
+    "holdout_new_hash": "1cecb7d028a672b21be4b89d8ed6f008b019fb23cd4e811e391ebd32801e7ef1",
+    "historical_overlap": 0
+  },
+  "frozen_dev_configuration": {
+    "model": "XGBoost_GPU_300",
+    "decision_threshold": 0.55,
+    "dev_macro_f05": 0.9955
+  },
+  "holdout_new_results_open_corpus": {
+    "macro_f05": 0.4252,
+    "macro_precision": 0.5324,
+    "macro_recall": 0.3241,
+    "singleton_f05": 0.6816,
+    "multi_match_f05": 0.4222,
+    "candidate_recall_pct": 30.76
+  },
+  "holdout_new_results_closed_synthetic_pool": {
+    "macro_f05": 0.9999,
+    "macro_precision": 1.0,
+    "macro_recall": 0.9998
+  },
+  "control_m7_results_same_holdout": {
+    "macro_f05": 0.5077,
+    "macro_precision": 0.6503,
+    "macro_recall": 0.3233,
+    "singleton_f05": 0.9551,
+    "multi_match_f05": 0.4959
+  }
+}
