@@ -1,20 +1,53 @@
 {
-  "timestamp": "2026-09-26 14:33:31",
+  "timestamp": "2026-09-27 10:06:40",
   "completed_chunks": [
     1,
-    2
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
   ],
   "total_chunks": 35,
   "streaming_state": {
-    "total_s1_processed": 100000,
-    "total_candidate_pairs": 14378312,
-    "total_predictions": 211499,
-    "zero_match_s1": 20275,
-    "single_match_s1": 26530,
-    "multi_match_s1": 53195,
-    "s2_predictions": 108038,
-    "s3_predictions": 103461,
-    "zero_candidate_s1": 2731,
+    "total_s1_processed": 1732544,
+    "total_candidate_pairs": 248971025,
+    "total_predictions": 3634786,
+    "zero_match_s1": 352010,
+    "single_match_s1": 458249,
+    "multi_match_s1": 922285,
+    "s2_predictions": 1854809,
+    "s3_predictions": 1779977,
+    "zero_candidate_s1": 48053,
     "chunk_records": [
       {
         "chunk_number": 1,
@@ -32,6 +65,303 @@
         "predictions_generated": 107435,
         "elapsed_seconds": 1370.3358204364777,
         "peak_ram_mb": 20356.2421875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 3,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7160174,
+        "predictions_generated": 104352,
+        "elapsed_seconds": 1567.2942488193512,
+        "peak_ram_mb": 16819.8046875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 4,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7200309,
+        "predictions_generated": 105071,
+        "elapsed_seconds": 1363.7709920406342,
+        "peak_ram_mb": 20717.0546875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 5,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7194674,
+        "predictions_generated": 105485,
+        "elapsed_seconds": 931.1418116092682,
+        "peak_ram_mb": 20927.07421875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 6,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7179264,
+        "predictions_generated": 105867,
+        "elapsed_seconds": 1240.4354615211487,
+        "peak_ram_mb": 20517.44140625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 7,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7165398,
+        "predictions_generated": 105860,
+        "elapsed_seconds": 574.4146633148193,
+        "peak_ram_mb": 20833.171875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 8,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7205043,
+        "predictions_generated": 104501,
+        "elapsed_seconds": 559.3775534629822,
+        "peak_ram_mb": 21081.39453125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 9,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7183315,
+        "predictions_generated": 104565,
+        "elapsed_seconds": 553.0605938434601,
+        "peak_ram_mb": 21206.94921875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 10,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7155611,
+        "predictions_generated": 104396,
+        "elapsed_seconds": 544.7836101055145,
+        "peak_ram_mb": 20885.41015625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 11,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7202816,
+        "predictions_generated": 104415,
+        "elapsed_seconds": 561.4259121417999,
+        "peak_ram_mb": 21105.9375,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 12,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7170369,
+        "predictions_generated": 104001,
+        "elapsed_seconds": 558.5306162834167,
+        "peak_ram_mb": 21136.37109375,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 13,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7205880,
+        "predictions_generated": 105077,
+        "elapsed_seconds": 550.0667190551758,
+        "peak_ram_mb": 21256.53515625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 14,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7209483,
+        "predictions_generated": 104084,
+        "elapsed_seconds": 553.7501835823059,
+        "peak_ram_mb": 21265.55859375,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 15,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7206954,
+        "predictions_generated": 105751,
+        "elapsed_seconds": 572.3160269260406,
+        "peak_ram_mb": 21232.0546875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 16,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7161824,
+        "predictions_generated": 105031,
+        "elapsed_seconds": 573.0242960453033,
+        "peak_ram_mb": 21250.62890625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 17,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7139471,
+        "predictions_generated": 105319,
+        "elapsed_seconds": 577.853951215744,
+        "peak_ram_mb": 21214.78515625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 18,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7237094,
+        "predictions_generated": 104563,
+        "elapsed_seconds": 588.267608165741,
+        "peak_ram_mb": 21254.19140625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 19,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7198108,
+        "predictions_generated": 105216,
+        "elapsed_seconds": 574.3874073028564,
+        "peak_ram_mb": 21270.921875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 20,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7193121,
+        "predictions_generated": 105161,
+        "elapsed_seconds": 570.2003946304321,
+        "peak_ram_mb": 21270.5625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 21,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7183387,
+        "predictions_generated": 103808,
+        "elapsed_seconds": 576.1862773895264,
+        "peak_ram_mb": 21245.28515625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 22,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7228800,
+        "predictions_generated": 105649,
+        "elapsed_seconds": 587.5362277030945,
+        "peak_ram_mb": 20887.73828125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 23,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7190774,
+        "predictions_generated": 105221,
+        "elapsed_seconds": 526.7221238613129,
+        "peak_ram_mb": 21203.70703125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 24,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7189521,
+        "predictions_generated": 104345,
+        "elapsed_seconds": 534.7469482421875,
+        "peak_ram_mb": 21189.703125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 25,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7174803,
+        "predictions_generated": 105202,
+        "elapsed_seconds": 510.8308699131012,
+        "peak_ram_mb": 21200.86328125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 26,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7152138,
+        "predictions_generated": 105897,
+        "elapsed_seconds": 512.84547996521,
+        "peak_ram_mb": 21234.81640625,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 27,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7220811,
+        "predictions_generated": 105065,
+        "elapsed_seconds": 511.85719871520996,
+        "peak_ram_mb": 21259.26171875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 28,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7182414,
+        "predictions_generated": 104597,
+        "elapsed_seconds": 501.2234969139099,
+        "peak_ram_mb": 21222.6328125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 29,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7157242,
+        "predictions_generated": 103718,
+        "elapsed_seconds": 513.0036602020264,
+        "peak_ram_mb": 21270.60546875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 30,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7168174,
+        "predictions_generated": 106253,
+        "elapsed_seconds": 517.8678765296936,
+        "peak_ram_mb": 21209.05859375,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 31,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7173280,
+        "predictions_generated": 104189,
+        "elapsed_seconds": 518.7161681652069,
+        "peak_ram_mb": 21211.20703125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 32,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7189972,
+        "predictions_generated": 104049,
+        "elapsed_seconds": 511.61296677589417,
+        "peak_ram_mb": 21238.875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 33,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7174077,
+        "predictions_generated": 104004,
+        "elapsed_seconds": 511.9921040534973,
+        "peak_ram_mb": 21260.82421875,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 34,
+        "s1_rows_processed": 50000,
+        "candidate_pairs_generated": 7152778,
+        "predictions_generated": 104814,
+        "elapsed_seconds": 515.4331748485565,
+        "peak_ram_mb": 21231.953125,
+        "peak_vram_mb": 0.0
+      },
+      {
+        "chunk_number": 35,
+        "s1_rows_processed": 32544,
+        "candidate_pairs_generated": 4685634,
+        "predictions_generated": 67761,
+        "elapsed_seconds": 339.3073682785034,
+        "peak_ram_mb": 18855.71875,
         "peak_vram_mb": 0.0
       }
     ]

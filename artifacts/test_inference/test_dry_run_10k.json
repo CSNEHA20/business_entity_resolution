@@ -1,6 +1,6 @@
 {
   "n_samples": 10000,
-  "elapsed_seconds": 226.16171836853027,
+  "elapsed_seconds": 165.51993465423584,
   "total_candidates": 1423079,
   "mean_candidates_per_s1": 142.3079,
   "median_candidates_per_s1": 111.0,
@@ -19,6 +19,6 @@
   "multi_match_rate": 0.5215,
   "s2_predictions": 10467,
   "s3_predictions": 10029,
-  "peak_ram_mb": 15267.953125,
+  "peak_ram_mb": 15272.9609375,
   "peak_vram_mb": 0.0
 }
